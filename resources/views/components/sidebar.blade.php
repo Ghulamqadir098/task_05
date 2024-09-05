@@ -6,7 +6,7 @@
             <li class="dropdown">
                 <a href="#">Task</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Create Task</a></li>
+                    <li><a href="#">Create Product</a></li>
                     <li><a href="#">My Tasks</a></li>
                     <li><a href="#">Marketing</a></li>
                 </ul>
