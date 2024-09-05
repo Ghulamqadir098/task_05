@@ -15,7 +15,7 @@
                 <div class="card">
                     <div class="card-header bg-primary text-white">Signup</div>
                     <div class="card-body">
-                        <form method="POST" action="{{route('register')}}">
+                        <form method="POST" action="{{route('register.user')}}">
                             @csrf
                             <div class="mb-3">
                                 <label for="signup" class="form-label">Name</label>
