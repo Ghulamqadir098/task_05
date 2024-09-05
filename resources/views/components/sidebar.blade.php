@@ -4,10 +4,10 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li class="dropdown">
-                <a href="#">Task</a>
+                <a href="#">Products</a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Create Product</a></li>
-                    <li><a href="#">My Tasks</a></li>
+                    <li><a href="#">View Products</a></li>
                     <li><a href="#">Marketing</a></li>
                 </ul>
             </li>
