@@ -6,8 +6,8 @@
             <li class="dropdown">
                 <a href="#">Products</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Create Product</a></li>
-                    <li><a href="#">View Products</a></li>
+                    <li><a href="{{route('product.form')}}">Create Product</a></li>
+                    <li><a href="{{route('show.product')}}">View Products</a></li>
                     <li><a href="#">Marketing</a></li>
                 </ul>
             </li>
