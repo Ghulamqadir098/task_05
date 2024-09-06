@@ -10,6 +10,8 @@
             <th scope="col">Name</th>
             <th scope="col">Price</th>
             <th scope="col">Description</th>
+            <th scope="col">Categories</th>
+
             <th scope="col">Action</th>
             
           </tr>
@@ -21,6 +23,12 @@
     <th scope="row">{{$item->name}}</th>
     <td>{{$item->price}}</td>
     <td>{{$item->description}}</td>
+    <td>
+      @foreach ($item->categories as $category)
+          <span class="badge badge-info">{{ $category->name }}</span>
+      @endforeach
+  </td>
+
     <td>
         <a href="{{route('edit.product', $item->id)}}" class="btn btn-primary">Edit</a>
         <form action="{{route('product.destroy', $item->id)}}" method="POST">

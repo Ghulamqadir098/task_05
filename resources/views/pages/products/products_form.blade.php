@@ -23,6 +23,15 @@
                             <input type="text" class="form-control" id="password" name="description" required>
                         </div>
 
+                        <div class="mb-3">
+                            <label for="categories" class="form-label">Select Categories</label>
+                            <select class="form-control" id="categories" name="categories[]" multiple>
+                                @foreach($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
                         <button type="submit" class="btn btn-success">Add</button>
                     </form>
                 </div>

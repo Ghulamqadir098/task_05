@@ -24,7 +24,7 @@ class ProductController extends Controller
          'description' => $request->description,
          'price' => $request->price,
      ]);
-
+     $product->categories()->attach($request->categories);
      return response()->json($product, 201);
 
     }

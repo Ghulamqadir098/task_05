@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\ProductController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
     if(Auth::check()){
@@ -35,8 +36,11 @@ Route::prefix('auth')->group(function () {
 
 // Products routes 
 Route::prefix('product')->group(function () {
-
-Route::view('product_form','pages.products.products_form')->name('product.form');
+Route::get('product_form',function(){
+ $categories= Category::all();   
+ return view('pages.products.products_form',compact('categories'));
+}
+)->name('product.form');
 Route::post('create',[ProductController::class,'create_product'])->name('create.product');
 Route::get('show',[ProductController::class,'show_products'])->name('show.product');
 Route::get('edit/{id}',[ProductController::class,'edit_product'])->name('edit.product');
