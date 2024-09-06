@@ -42,7 +42,9 @@ body {
 .dropdown {
     position: relative;
 }
-
+.dropdown1 {
+    position: relative;
+}
 .dropdown-menu {
   
     display: none;
@@ -54,7 +56,9 @@ body {
 .dropdown.open .dropdown-menu {
     display: block;
 }
-
+.dropdown1.open .dropdown-menu {
+    display: block;
+}
 .dropdown-menu li {
     margin-bottom: 10px;
 }

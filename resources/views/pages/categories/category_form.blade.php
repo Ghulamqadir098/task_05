@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header bg-primary text-white">Add a Category</div>
                 <div class="card-body">
-                    <form method="POST" action="#">
+                    <form method="POST" action="{{route('create.category')}}">
                         @csrf
                         <div class="mb-3">
                             <label for="category" class="form-label">Category</label>
