@@ -18,4 +18,9 @@ class Product extends Model
 
     }
 
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class); // Assuming Category model has a 'products' relationship
+    }
+
 }
